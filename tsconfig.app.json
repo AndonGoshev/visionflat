@@ -7,7 +7,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "declaration": false,
+    "declaration": true,
 
     /* Bundler mode */
     "moduleResolution": "node",

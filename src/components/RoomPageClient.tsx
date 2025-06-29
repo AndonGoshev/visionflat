@@ -6,7 +6,6 @@ import { Badge } from '../components/ui/badge';
 import { Building2, Home, Square, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Link } from 'react-router-dom';
-import { QRCodeGenerator } from './admin/QRCodeGenerator';
 import * as QRCodeLib from 'qrcode';
 
 interface RoomData {
@@ -101,8 +100,6 @@ export default function RoomPageClient({ roomData, loading, initialImageIndex = 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
-
-  const publicUrl = `${window.location.origin}/room/${roomData.slug}`;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
@@ -290,4 +287,4 @@ export default function RoomPageClient({ roomData, loading, initialImageIndex = 
       </div>
     </div>
   );
-} 
+}

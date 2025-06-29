@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           .from('user_profiles')
           .select('*')
           .eq('id', user.id)
-          .single();
+          .maybeSingle();
         setProfile(profileData as UserProfile);
       }
     };
@@ -89,4 +89,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </main>
     </div>
   );
-} 
+}

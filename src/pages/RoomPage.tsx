@@ -107,7 +107,7 @@ export default function RoomPage() {
         .eq('slug', roomSlug)
         .eq('flat.slug', flatSlug)
         .eq('flat.floor.entrance.building.slug', buildingSlug)
-        .single();
+        .maybeSingle();
       if (!error && data) {
         setRoomData(normalizeRoomData(data));
       } else {
@@ -123,4 +123,4 @@ export default function RoomPage() {
       <RoomPageClient roomData={roomData} loading={loading} />
     </Layout>
   );
-} 
+}
